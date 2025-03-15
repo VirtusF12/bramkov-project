@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns:th="https://www.thymeleaf.org">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Интернет-сервис, предоставляющий пользователям Интернета услуги по виртуальному общению с другими пользователями, аналог реальных служб знакомств. Цели знакомств у различных пользователей могут быть самые разные — виртуальное общение, дружба, серьёзные отношения, создание семьи, секс, виртуальный секс (нередко — всё вместе).">
+  <meta name="author" content="bramkov.com">
+  <meta name="yandex-verification" content="0b71d6761acff126" />
+  <meta name="google-site-verification" content="4NB3OuzyZHo0pUq3qOjc2EF5Akbt0HVzjvU45f512Ys" />
+  <title th:text="${title}"></title>
+  <link rel="icon" th:href="@{${pathIcon}}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geologica&family=Roboto:wght@400;500;700&family=Wix+Madefor+Text:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="/css/lib/bootstrap-5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" >
+  <link href="/css/reg.css" rel="stylesheet">
+  <script src="/js/lib/jquery-3.6.3.js"></script>
+</head>
+
+<body class="text-center">
+
+<!--https://uxwing.com/svg-icon-editor/-->
+<form th:method="POST" th:action="@{/reg}" th:object="${user}" class="form-reg" >
+  <img class="mb-4" src="/img/logo.svg" alt="" width="250" height="200">
+  <h1 class="h3 mb-3 font-weight-normal">Регистрация</h1>
+  <input type="text"
+         pattern="^[a-zA-Z0-9]+$"
+         title="Любое слово на латинице."
+         th:field="*{username}"
+         placeholder="Логин"
+         class="form-control input-reg"
+         autofocus="true"
+         required />
+
+  <div th:if="${isShowErrorMessageByUsername}" class="alert alert-danger" role="alert">
+    <strong th:text="${usernameError}"></strong>
+  </div>
+  <br>
+  <!-- <input  type="text"
+          pattern="^[а-яА-Яa-zA-Z]+$"
+          title="Имя"
+          th:field="*{fullName}"
+          placeholder="Имя"
+          class="form-control input-reg"
+          required />
+  <br>
+  <span>Дата рождения</span>
+  <input  id="dob"
+          type="date"
+          placeholder="Дата рождения"
+          class="form-control input-reg"
+          th:field="*{dob}"
+          required />
+  <br>
+  <label>Ваш пол</label>
+  <div style="text-align: left; margin-top: 10px;">
+    <input  id="man"
+            type="radio"
+            th:field="*{gender}"
+            name="gender"
+            value="MAN"
+            required>
+    <label for="man"> М</label>
+    <input  id="woman"
+            type="radio"
+            th:field="*{gender}"
+            name="gender"
+            value="WOMAN"
+            style="margin-left: 24px;">
+    <label for="woman"> Ж</label>
+  </div>
+  <br> -->
+  <input type="password"
+         pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+         title="Не менее восьми символов, содержащих хотя бы одну цифру и символы из верхнего и нижнего регистра."
+         th:field="*{password}"
+         placeholder="Пароль"
+         class="form-control input-reg"
+         required />
+  <br>
+  <input type="password"
+         th:field="*{passwordConfirm}"
+         placeholder="Подтвердить пароль"
+         class="form-control input-reg"
+         required />
+  <br>
+  <div th:if="${isShowErrorMessageByPassword}" class="alert alert-danger" role="alert">
+    <strong th:text="${passwordError}"></strong>
+  </div>
+  <button type="submit" style="border-radius: 50px;" class="btn btn-lg btn-info btn-block btn-reg">СОЗДАТЬ</button>
+  <p style="margin-top: 20px;">
+    <a th:href="@{/}" class="link-info">
+      <img src="/img/login/back.svg" style="width: 32px; height: 32px;" alt="">
+    </a></p>
+  <p class="mt-5 mb-3 text-muted">&copy; 2025</p>
+</form>
+
+</body>
+
+</html>

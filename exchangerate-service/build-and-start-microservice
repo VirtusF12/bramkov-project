@@ -1,0 +1,59 @@
+#!/bin/bash
+
+# mihail@MacBook ~ % ./IdeaProjects/bramkov-microservice-exchangerate/build-and-start-microservice
+# mihail@MacBook bramkov-microservice-exchangerate % ./build-and-start-microservice
+
+echo '************** build microservice ***************'
+cd ~/IdeaProjects/bramkov-microservice-exchangerate
+mvn clean package
+
+# kill process (kill -9 PID)
+
+echo '************** start microservice ***************'
+java -jar target/bramkov-microservice-exchangerate-0.0.1-SNAPSHOT.jar
+
+
+#cat .zshrc
+#
+#alias deploy='sh /Users/mihail/IdeaProjects/Friend18/scripts/deploy.sh'
+
+#!/bin/bash
+
+#connect to mysql
+#mysql -u root -p WebNodeDB
+#enter password: password
+
+#host='195.133.32.151'
+#port='80'
+#
+#echo 'UPDATE...'
+#ssh root@$host << EOF
+#apt-get update
+#EOF
+#
+#echo 'KILL PROCESS java (remote server)...'
+#ssh root@$host << EOF
+#
+#pgrep java | xargs kill -9
+#
+#EOF
+#
+#echo 'DELETE *.jar, log.txt'
+#ssh root@$host << EOF
+#
+#rm ~/Friend18-0.0.1-SNAPSHOT.jar
+#rm ~/log.txt
+#
+#EOF
+#
+#echo 'COPY FILES...'
+#scp ~/IdeaProjects/Friend18/target/Friend18-0.0.1-SNAPSHOT.jar \
+#    root@$host:~/
+#
+#
+#echo "START SERVER: $host"
+#ssh -tt root@$host << EOF
+#
+#nohup /usr/lib/jvm/jdk-19.0.2/bin/java -jar Friend18-0.0.1-SNAPSHOT.jar > log.txt &
+#
+#EOF

@@ -1,0 +1,120 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;1,700&display=swap');
+
+* {
+  margin: 0;  /* внешний отступ на всех 4-ох сторонах элемента */
+  padding: 0; /* внутренний отступ на всех 4-ох сторонах элемента */
+  box-sizing: border-box; /* учитывать границы и внутренние отступы при указании ширины или высоты элемента  */
+}
+
+body {
+  background-image: linear-gradient( rgb(0 0 0 / 62%) 100%, rgb(3 3 3 / 62%) 14%), url(/img/index/background-img.png);
+    font-family: 'Wix Madefor Text', sans-serif;
+}
+
+.logo {
+  font-family: 'Wix Madefor Text', sans-serif;
+  color: white;
+  font-weight: 700;
+  font-size: 1.6rem;
+  margin-left: 27px;
+}
+
+.input-btn {
+  width: 75% !important;
+  height: 44px !important;
+  border-radius: 30px;
+  outline: none;
+  color: white;
+  border: none;
+  font-size: 20px;
+  padding-top: 8px;
+  background: linear-gradient(to left, #FF6063, pink);
+  font-family: 'Wix Madefor Text', sans-serif;
+  background-image: linear-gradient(315deg, #fc5296 0%, #f67062 74%);
+  text-shadow: 0.5px 0.5px 0.5px #000;
+  display: block;
+  margin: auto;
+  font-weight: 600;
+}
+
+.info {
+  font-size: 10px;
+  font-weight: 100;
+  color: #A79E9E;
+}
+
+#header {
+  margin-top: 2.2rem;
+}
+
+#footer {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  margin-top: 96px;
+  margin-bottom: 50px;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+.row {
+  text-align: center;
+    margin-bottom: 38px;
+    width: 100%;
+    height: 29px;
+}
+
+#name {
+  text-align: center;
+  font-family: 'Wix Madefor Text', sans-serif;
+  color: white;
+  font-size: 36px;
+  margin-bottom: calc(100vh/6);
+  margin-top: calc(100vh/4);
+  font-weight: 700;
+}
+
+.btn-enter {
+  background-color: rgba(28,28,28,0) !important;
+  text-align: center;
+  outline: none;
+  text-decoration: none;
+  border: 2px solid;
+  background: border-box;
+}
+
+#logo {
+  font-family: 'Wix Madefor Text', sans-serif;
+  color: white;
+  font-weight: 700;
+  font-size: 27px;
+  position: absolute;
+  margin-left: 27px;
+  margin-top: -256px;
+}
+
+.wh-32 {
+  width: 32px;
+  height: 32px;
+}
+
+.link-license {
+  color: #51B3C9;
+}
+
+.item-service {
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.unauthenticated {
+  text-align: center;
+  margin-top: 55px;
+}

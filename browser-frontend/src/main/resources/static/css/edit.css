@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --color-gray: #808080;
+    --color-blue: #3399FF;
+    --size-text: 40px;
+}
+
+:active, :hover, :focus {
+    outline: 0;
+    outline-offset: 0;
+
+}
+
+.edit-user__img {
+    width: 450px;
+    height: 450px;
+    margin: auto;
+    border-radius: 50%;
+}
+
+.marg {
+    margin: 40px;
+}
+
+#form {
+    text-align: center;
+    margin: auto;
+}
+
+.input {
+    border: 1px solid var(--color-gray);
+    border-radius: 50px;
+    padding: 20px;
+    margin-top: 40px;
+    width: 600px;
+    font-size: 30px;
+    padding-left: 40px;
+}
+
+.input-height {
+    height: 75px;
+}
+
+.input-file {
+    padding-top: 56px;
+}
+
+.input-date {
+    font-family: 'Wix Madefor Text', sans-serif;
+}
+
+.input-text {
+    position: absolute;
+    font-family: 'Wix Madefor Text', sans-serif;
+    font-size: var(--size-text);
+    margin-top: 15px;
+    margin-left: 20px;
+    background-color: #FFF;
+    padding: 2px;
+    color: var(--color-gray);
+}
+
+.btn {
+    background-color: bisque;
+    border: 0px;
+    padding: 37px;
+    font-size: 40px;
+    border-radius: 50px;
+    margin-bottom: 19px;
+    font-size: 40px;
+}
+
+.link-back {
+    text-decoration: none;
+    color: #0f7afc;
+    border-bottom: 1px solid;
+    border-bottom-color: rgba(15, 122, 252, 0.2);
+    font-family: 'Wix Madefor Text', sans-serif;
+    font-size: 40px;
+}
+
+.edit-user__img {
+
+   box-shadow: 0 0 30px rgba(0,0,0,0.8); 
+}

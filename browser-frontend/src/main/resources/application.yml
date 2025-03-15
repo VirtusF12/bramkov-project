@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: browser-frontend
+server:
+  port: 8085
+
+endpoint:
+  service:
+    exchange:
+      rate: exchangerate-service
+
+# LOGGING
+logging:
+  level:
+    org:
+      springframework:
+        security: TRACE
+        messaging: TRACE
+        web:
+          socket: TRACE
+
+project:
+  path:
+    icon: /img/favicon.ico

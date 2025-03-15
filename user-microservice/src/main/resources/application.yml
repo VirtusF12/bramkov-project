@@ -1,0 +1,44 @@
+spring:
+  application:
+    name: user-microservice
+  datasource:
+    url: jdbc:postgresql://localhost:5432/user_microservice_db
+    username: postgres
+    password: sde9REBKA435k
+  jpa:
+    hibernate:
+#      ddl-auto: create-drop, update
+      ddl-auto: update
+      format_sql: true
+    show-sql: true
+    properties:
+      hibernate:
+        jdbc:
+          lob:
+            non_contextual_creation: true
+      dialect: org.hibernate.dialect.PostgreSQLDialect
+  mvc:
+    hiddenmethod:
+      filter:
+        enabled: true
+
+server:
+  port: 8089
+
+#  /Library/PostgreSQL/17/bin
+# export PATH=/Library/PostgreSQL/17/bin:$PATH
+# echo $PATH
+# psql -U postgres -h localhost bramkov_db
+# \dt (show tables)
+
+
+#  \?                   (list all the commands)
+#  \l                   (list databases)
+#  \conninfo            (display information about current connection)
+#  \c [DBNAME]          (connect to new database, e.g., \c template1)
+#  \dt                  (list tables of the public schema)
+#  \dt <schema-name>.*  (list tables of certain schema, e.g., \dt public.*)
+#  \dt *.*              (list tables of all schemas)
+# Then you can run SQL statements, e.g., SELECT * FROM my_table;(Note: a statement must be terminated with semicolon ;)
+#  \q                   (quit psql)
+# \! clear              (clear console)

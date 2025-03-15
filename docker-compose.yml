@@ -1,0 +1,34 @@
+version: "3"
+
+services:
+
+  exchangerate-service:
+    build: ~/IdeaProjects/exchangerate-service
+    ports:
+      - 8081:8081
+
+  bramkov-service:
+    build: ~/IdeaProjects/Bramkov
+    ports:
+      - 8080:8080
+
+
+#  a-service:
+#    build:  ~/IdeaProjects/bramkov-project/a-service
+#    depends_on:
+#      - eureka-server
+#    ports:
+#      - 8085:8085
+#
+#  b-service:
+#    build:  ~/IdeaProjects/bramkov-project/b-service
+#    depends_on:
+#      - eureka-server
+#    ports:
+#      - 8086:8086
+#
+#  eureka-server:
+#    build: ~/IdeaProjects/bramkov-project/eureka-server
+#    ports:
+#      - 8761:8761
+

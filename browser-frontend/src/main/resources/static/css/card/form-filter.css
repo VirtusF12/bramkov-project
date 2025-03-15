@@ -1,0 +1,278 @@
+/* https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/ */
+
+.range-slider {
+    position: relative;
+    width: 200px;
+    height: 35px;
+    text-align: center;
+}
+
+.range-slider input {
+    pointer-events: none;
+    position: absolute;
+    /* overflow: hidden; */
+    left: 0;
+    top: 15px;
+    width: 200px;
+    outline: none;
+    height: 17px;
+    margin: 0;
+    padding: 0;
+}
+
+.range-slider input::-webkit-slider-thumb {
+    pointer-events: all;
+    position: relative;
+    z-index: 1;
+    outline: 0;
+}
+
+.range-slider input::-moz-range-thumb {
+    pointer-events: all;
+    position: relative;
+    z-index: 10;
+    -moz-appearance: none;
+    width: 9px;
+}
+
+.range-slider input::-moz-range-track {
+    position: relative;
+    z-index: -1;
+    background-color: rgba(0, 0, 0, 1);
+    border: 0;
+}
+
+.range-slider input:last-of-type::-moz-range-track {
+    -moz-appearance: none;
+    background: none transparent;
+    border: 0;
+}
+
+.range-slider input[type=range]::-moz-focus-outer {
+  border: 0;
+}
+
+.rangeValue {
+	width: 30px;
+}
+
+.output {
+  position: absolute;
+  /* border:1px solid #999; */
+  width: 40px;
+  height: 30px;
+  text-align: center;
+  color: #999;
+  border-radius: 4px;
+  display: inline-block;
+  font: bold 15px/30px Helvetica, Arial;
+  bottom: 75%;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.output.outputTwo {
+	left: 100%;
+}
+
+.container {
+  /* position: absolute; */
+  top: 50%;
+  left: 36%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+input[type=range] {
+  -webkit-appearance: none;
+  background: none;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+  height: 0.1px;
+  border: none;
+  border-radius: 3px;
+  background: transparent;
+}
+
+input[type=range]::-ms-track {
+  height: 0.1px;
+  background: transparent;
+  border: none;
+  border-radius: 3px;
+}
+
+input[type=range]::-moz-range-track {
+  height: 0.1px;
+  background: transparent;
+  border: none;
+  border-radius: 3px;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border: none;
+  height: 28px;
+  width: 28px;
+  border-radius: 50%;
+  background: #e56462;;
+  margin-top: -14px;
+  position: relative;
+  z-index: 10000;
+}
+
+input[type=range]::-ms-thumb {
+  -webkit-appearance: none;
+  border: none;
+  height: 28px;
+  width: 28px;
+  border-radius: 50%;
+  background: #e56462;;
+  margin-top: -14px;
+  position: relative;
+  z-index: 10000;
+}
+
+input[type=range]::-moz-range-thumb {
+  -webkit-appearance: none;
+  border: none;
+  height: 28px;
+  width: 28px;
+  border-radius: 50%;
+  background: #e56462;;
+  margin-top: -14px;
+  position: relative;
+  z-index: 10000;
+}
+
+input[type=range]:focus {
+  outline: none;
+}
+
+.full-range,
+.incl-range {
+	width: 100%;
+	height: 5px;
+	left: 0;
+	top: 21px;
+	position: absolute;
+	background: #DDD;
+}
+
+.incl-range {
+	/* background: gold; */
+}
+
+.p-option {
+  margin-left: 25px;
+  margin-bottom: 20px;
+}
+
+/* form filter */
+#filter {
+  width: 350px;
+  position: absolute;
+  background-color: white;
+  border-radius: 15px;
+  z-index: 1;
+  font-family: 'Wix Madefor Text', sans-serif;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.lable-gender {
+  margin-bottom: 15px !important;
+}
+
+#filter-title {
+  text-align: right;
+}
+
+#filter-gender {
+  font-family: 'Wix Madefor Text', sans-serif;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+#filter-city {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+#filter-img-exit {
+  position: relative;
+  margin-top: 12px;
+  margin-right: 12px;
+  margin-bottom: 12px;
+}
+
+.form-filter-lable {
+  display: block;
+  font-family: 'Wix Madefor Text', sans-serif;
+  margin-bottom: 47px;
+  margin-left: 25px;
+  font-weight: 800;
+  font-size: 20px;
+  color: #717579;
+  /* text-shadow: black 0.1em 0.1em 0.09em; */
+}
+
+#btn-filter {
+  border: none;
+  width: 204px;
+  height: 35px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 50px;
+  font-family: 'Wix Madefor Text', sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 15px;
+  color: black;
+  background-image: linear-gradient(60deg, #e85475 10%, #d48444 50%, #efcb0a 100%);
+  transform: scale(0.930);
+  display: block;
+  margin-left: 20%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.radiobtn {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+.radiobtn + label {
+  position: relative;
+  padding: 0 0 0 37px;
+  cursor: pointer;
+}
+.radiobtn + label:before {
+  content: " ";
+  position: absolute;
+  top: -3px;
+  left: 0;
+  width: 25px;
+  height: 25px;
+  border-radius: 50px;
+  border: 2px solid #bbb4b2;
+  background: #ffffff;
+}
+.radiobtn + label:after {
+  content: " ";
+  position: absolute;
+  top: 1px;
+  left: 4px;
+  width: 20px;
+  height: 20px;
+  border-radius: 39px;
+  background: #e56462;
+  box-shadow: 0px 0px 0px -7px #fefefe inset;
+  opacity: 0;
+  transition: .2s;
+}
+.radiobtn:checked + label:after {
+  opacity: 1;
+}
+.radiobtn:focus + label:before {
+  box-shadow: -50px -50px 0px -50px #4d4438;
+}
+

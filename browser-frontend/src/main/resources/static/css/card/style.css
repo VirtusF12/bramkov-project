@@ -1,0 +1,242 @@
+* {
+    margin: 0;  /* внешний отступ на всех 4-ох сторонах элемента */
+    padding: 0; /* внутренний отступ на всех 4-ох сторонах элемента */
+    box-sizing: border-box; /* учитывать границы и внутренние отступы при указании ширины или высоты элемента  */
+}
+
+:root {
+    --margin-left: 16vw;
+    --step: 6vw;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    width: 100vw; /* vw - относительная единица измерения. вычисляется напрямую относительно окна браузера */
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    /* background: linear-gradient(0deg, #ff6063, #fd267a); */
+}
+
+#swiper {
+
+    overflow: hidden;  /* убрать скролл */
+    height: 70vh;
+    aspect-ratio: 2 / 3;
+    perspective: 1000px;
+    perspective-origin: center 50%;
+    transform-style: preserve-3d;
+    position: relative;
+    margin-top: -14vh;
+}
+
+.card {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-radius: 20px;
+    overflow: hidden;
+    /* transform: translateZ(calc(-30px * var(--i))) translateY(calc(-20px * var(--i))) rotate(calc(-4deg * var(--i))); */
+    /* filter: drop-shadow(2px 2px 20px rgba(0,0,0,0.5)); */
+    cursor: pointer;
+    user-select: none;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 50%;
+}
+
+#like,
+#dislike {
+
+    font-size: 6vh;
+    border-radius: 50%;
+    padding: 20px;
+    position: relative;
+    z-index: 1;
+    animation-name: iconAnimation1;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: both;
+    animation-play-state: paused;
+}
+
+#like.trigger,#dislike.trigger {
+    animation-name: iconAnimation2;
+}
+
+#like {
+    color: red;
+    /* background-color: rgba(255, 255, 255, 0.5); */
+    position: absolute;
+    margin-top: 43vh;
+    margin-left: 12vh;
+}
+
+#dislike {
+    /* color: #ccc;
+    background-color: rgba(0, 0, 0, 0.5); */
+    position: absolute;
+    margin-top: 43vh;
+    margin-left: -12vh;
+}
+
+@keyframes iconAnimation1 {
+    0%,
+    100% {
+        opacity: 0.2;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+@keyframes iconAnimation2 {
+    0%,
+    100% {
+        opacity: 0.2;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+#card-header {
+    position: absolute;
+    width: 100vw;
+    margin-top: -92vh;
+    text-align: center;
+    margin-left: -23vh;
+}
+
+
+#card-footer {
+    position: absolute;
+    left: 0;
+    text-align: center;
+    width: 100vw;
+    margin-top: 64vh;
+}
+
+#logo {
+    font-size: 5vh;
+    font-weight: 900;
+    background: -webkit-linear-gradient(#eee, #333);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(315deg, #ee8e6b 0%, #ef6da0 74%);
+    font-family: 'Wix Madefor Text', sans-serif;
+    /* margin-left: calc(30px + (500 - 30) * ((100vw - 390px) / (1920 - 390)));
+}
+
+#img-card-bell {
+    /* position: absolute;
+    margin-top: 1vw;
+    margin-left: 30vw; */
+}
+
+#img-card-filter {
+    margin-top: 0.1vw;
+    margin-left: 20px;
+}
+
+#card-messge-a {
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+#card-user-a {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+#bell {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+#bell-notify {
+    position: absolute;
+    background: #e56462;
+    height: 20px;
+    width: 20px;
+    margin-left: 16px;
+    margin-top: -9px;
+    border-radius: 50px;
+}
+
+#bell-count-match {
+    font-size: 10px;
+    font-family: 'Wix Madefor Text', sans-serif;
+    font-weight: 800;
+    margin-left: 7px;
+}
+
+/*
+@media (min-width: 450px) {
+    #logo {
+        margin-left: calc(var(--margin-left));
+    }
+    #img-card-bell {
+        margin-left: 25vw;
+    }
+    #img-card-menu {
+        margin-left: 35vw;
+    }
+    #img-card-user {
+        margin-top: 667px;
+    }
+}
+
+@media (min-width: 700px) {
+    #logo {
+        margin-left: calc(var(--margin-left) + 1*var(--step));
+    }
+    #img-card-bell {
+        margin-left: 20vw;
+    }
+    #img-card-menu {
+        margin-left: 30vw;
+    }
+    #img-card-user {
+        margin-top: 667px;
+    }
+}
+
+@media (min-width: 990px) {
+    #logo {
+        margin-left: calc(var(--margin-left) + 2*var(--step));
+    }
+    #img-card-bell {
+        margin-left: 15vw;
+    }
+    #img-card-menu {
+        margin-left: 25vw;
+    }
+    #img-card-user {
+        margin-top: 667px;
+    }
+}
+
+@media (min-width: 1400px) {
+    #logo {
+        margin-left: calc(var(--margin-left) + 3*var(--step));
+    }
+    #img-card-bell {
+        margin-left: 10vw;
+    }
+    #img-card-menu {
+        margin-left: 15vw;
+    }
+    #img-card-user {
+        margin-top: 667px;
+    }
+} */

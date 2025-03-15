@@ -1,0 +1,174 @@
+* {
+    margin: 0;  /* внешний отступ на всех 4-ох сторонах элемента */
+    padding: 0; /* внутренний отступ на всех 4-ох сторонах элемента */
+    box-sizing: border-box; /* учитывать границы и внутренние отступы при указании ширины или высоты элемента  */
+}
+
+a {
+    text-decoration: none;
+}
+
+a:link {
+    text-decoration: none;
+}
+  
+a:visited {
+    text-decoration: none;
+}
+
+p {
+    font-family: 'Wix Madefor Text', sans-serif;
+    color: black;
+}
+
+#lable {
+    background-color: #D9D9D9;
+}
+
+.fullname {
+    padding: 10px;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    font-size: 24px;
+    font-weight: 700;
+    padding-left: 22px;
+}
+
+#footer {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.info {
+    font-size: 10px;
+    font-weight: 100;
+    color: #A79E9E;
+}
+
+.logo {
+    text-align: center;
+    font-size: 45px;
+    font-weight: 900;
+    background: -webkit-linear-gradient(#eee, #333);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(315deg, #ee8e6b 0%, #ef6da0 74%);
+}
+
+#header {
+    margin-top: 98px;
+    margin-bottom: 133px;
+}
+
+.input-fullname {
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #D9D9D9;
+    width: 90%;
+    padding-bottom: 10px;
+    font-size: 20px;
+    font-family: 'Wix Madefor Text', sans-serif;
+}
+
+.input-btn {
+    width: 90%;
+    height: 60px;
+    border-radius: 30px;
+    outline: none;
+    color: white;
+    border: none;
+    font-size: 24px;
+    margin-top: 114px;
+    background: linear-gradient(to left, #FF6063, pink);
+    font-family: 'Wix Madefor Text', sans-serif;
+    background-image: linear-gradient(315deg, #fc5296 0%, #f67062 74%);
+    text-shadow: 0.5px 0.5px 0.5px #000;
+}
+
+.input-btn-desc {
+    margin-top: 27px !important;
+}
+
+.form-input {
+    text-align: center;
+}
+
+.lable-gender {
+    font-family: 'Wix Madefor Text', sans-serif;
+    margin-left: 10px
+}
+
+.radio-gender {
+    transform: scale(1.5);
+}
+
+
+
+
+/* photo */
+.photo-line {
+    width: 185px;
+    height: 230px;
+    border-radius: 10px;
+    margin: auto;
+    outline: 5px dashed #D9D9D9;
+    display: inline-block;
+    margin-bottom: 17px;
+}
+
+.photo-content {
+    width: 168px;
+    height: 214px;
+    background: #D9D9D9;
+    border-radius: 10px;
+    margin: auto;
+    margin-top: 8px;
+}
+
+.photo-img {
+    width: 194px;
+    height: 240px;
+    position: absolute;
+    margin: auto;
+    border-radius: 10px;
+    margin-top: -227px;
+    margin-left: -97px;
+}
+
+.input-file input[type=file] {
+	position: absolute;
+	z-index: -1;
+	opacity: 0;
+	display: block;
+	width: 0;
+	height: 0;
+}
+
+.input-file {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    background: linear-gradient(to left, #FF6063, pink);
+    font-family: 'Wix Madefor Text', sans-serif;
+    background-image: linear-gradient(315deg, #fc5296 0%, #f67062 74%);
+    text-shadow: 0.5px 0.5px 0.5px #000;
+    margin-top: 212px;
+    margin-left: -14px;
+    z-index: 100;
+}
+
+.input-file span {
+    margin-top: -4px;
+    margin-left: -9px;
+    position: absolute;
+    color: white;
+    font-size: 29px;
+}
+
+#header-edit {
+    margin-top: 46px;
+}

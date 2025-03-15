@@ -1,0 +1,14 @@
+
+
+echo "*********************** UP MICROSERVICES ***********************"
+
+cd ~/IdeaProjects/bramkov-project
+pwd
+
+docker -v
+
+docker images
+
+docker-compose down 
+
+docker-compose up 

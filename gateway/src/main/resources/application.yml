@@ -1,0 +1,15 @@
+
+spring:
+  application:
+    name: gateway
+#  cloud:
+#    gateway:
+#      routes:
+#        - id: a-service
+#          uri: http://127.0.0.1:8085
+#          predicates:
+#            - Host=a.service.api
+
+server:
+  port: 8080
+#  forward-headers-strategy: framework

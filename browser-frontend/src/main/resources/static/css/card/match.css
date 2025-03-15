@@ -1,0 +1,107 @@
+.match {
+    opacity: 0;
+    animation: show 5s linear 1s, hide 3s linear 5s;
+    /* animation: show 5s linear 1s; */
+    animation-fill-mode: forwards;
+    font-family: 'Wix Madefor Text', sans-serif;
+    position: absolute;
+    font-size: 10vh;
+    z-index: 10;
+    font-weight: 700;
+    text-align: center;
+    /* margin-left: 1vh; */
+    margin-top: 30vh;
+    background: -webkit-linear-gradient(#eee, #333);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(426deg, #6dee6b 0%, #54d9e8 74%);
+    font-style: italic;
+    width: 100%;
+  }
+  
+@keyframes show {
+    0% {
+        opacity:0;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    25% {
+        opacity:0.25;
+    }
+    75% {
+        opacity:0.75;
+    }
+    100% {
+        opacity:1;
+    }
+}
+
+@keyframes hide {
+    0% {
+        opacity:1;
+    }
+    25% {
+        opacity:0.75;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    75% {
+        opacity:0.25;
+    }
+    99% {
+        opacity:0;
+    }
+    100% {
+        width:0;
+        height:0;
+    }
+}
+
+@-webkit-keyframes show {
+    0% {
+        opacity:0;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    25% {
+        opacity:0.25;
+    }
+    75% {
+        opacity:0.75;
+    }
+    100% {
+        opacity:1;
+    }
+}
+ 
+
+@-webkit-keyframes hide {
+    0% {
+        opacity:1;
+    }
+    25% {
+        opacity:0.75;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    75% {
+        opacity:0.25;
+    }
+    99% {
+        opacity:0;
+    }
+    100% {
+        width:0;
+        height:0;
+    }
+} 
+
+  /* .hide {
+    opacity:0;
+    visibility: hidden;
+    transition: all .2s linear;
+  } */

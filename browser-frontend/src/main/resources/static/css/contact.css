@@ -1,0 +1,300 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+.row {
+    margin-left: 10px
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    /*background-image: url(../img/contact/pattern.svg);*/
+}
+
+#wrapper {
+    width:100%;
+    height:100%;
+    background-color:#fff;
+    overflow:hidden;
+}
+
+#mask {
+    width: 200%;
+    height:100%;
+    background-color:#fff;
+    display: flex;
+}
+
+.page-contact {
+    width: 100%;
+    height: 100%;
+    float: left;
+    background-color: #fff;
+}
+
+.page-message {
+    width:100%;
+    height:100%;
+    float: left;
+}
+
+.container-slider {
+    width: 100%;
+}
+
+/* menu */
+.contact-div__menu {
+    text-align: center;
+    margin-top: 5px;
+}
+
+.contact-span__icon--search {
+    background-color: white;
+    border-right: 0px solid white;
+    border-radius: 30px;
+}
+
+input[name="search"] {
+    outline: none;
+}
+
+input[name="search"] {
+    outline: none;
+    box-shadow: none !important;
+    border: 1px solid #ced4da;
+    border-left: 0;
+}
+
+input[name="search"]:focus {
+    outline: none;
+    box-shadow: none !important;
+    border: 1px solid #ced4da;
+    border-left: 0;
+}
+
+.contact-input__search {
+    border-left: 0px solid white;
+    border-radius: 30px;
+}
+
+/* item contact */
+.contact-div__row9--line {
+    border-bottom: 0.2px solid rgba(0,0,0, .2);
+    padding-bottom: 11px !important;
+    padding-top: 11px !important;
+}
+
+.contact-span__time {
+    font-family: 'Wix Madefor Text', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    color: #717579;
+}
+
+.contact-span__username {
+    font-family: 'Wix Madefor Text', sans-serif;
+    font-weight: 500;
+    font-size: 17px;
+    color: #000000;
+    padding-left: 0px !important;
+}
+
+.contact-span__status--offline {
+    font-family: 'Wix Madefor Text', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #898585;
+    padding-left: 0px !important;
+}
+
+.contact-span__status--online {
+    font-family: 'Wix Madefor Text', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #068f54;
+    padding-left: 0px !important;
+}
+
+.contact-div__img--photo {
+    text-align: center !important;
+    margin-top: 10px;
+    padding-right: 30px !important;
+}
+
+.contact-img__photo {
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+}
+
+.contact-message__left {
+    margin-right: auto;
+    width: 50%;
+    background-color: #e3e3ea;
+    border-radius: 0px 20px 20px 20px;
+    color: #000000;
+    border: 0.5px solid black;
+}
+
+.contact-message__rigth {
+    margin-left: auto;
+    width: 50%;
+    background-color: white;
+    border-radius: 20px 20px 0px 20px;
+    color: #000000;
+    border: 0.5px solid black;
+}
+
+.row-message {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    word-wrap: break-word;
+}
+
+.message-span {
+    display: block;
+    padding: 10px
+}
+
+#message-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: white;
+    width: 100%;
+
+    display: flex;
+    margin-bottom: 10px;
+    height: 66px;
+    box-shadow: 0px 18px 20px -20px rgba(34, 60, 80, 0.84);
+    padding-top: 10px;
+}
+
+#message-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background: white;
+    box-shadow: 0px 0px 26px -16px rgba(34, 60, 80, 0.84);
+}
+
+input[name="message-text"] {
+    margin-left: auto;
+    width: 80%;
+    border-radius: 20px 0px 0px 20px;
+    border: 0.5px solid black;
+    outline: none;
+}
+
+.message-attachment {
+    background: white;
+    border-radius: 0px 20px 20px 0px;
+    border: 0.5px solid black;
+    border-left: 0;
+}
+
+.message-nav__back {
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-right: 24px;
+}
+
+.message-img__photo {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+}
+
+img[alt="message-user-photo"] {
+    margin-top: 5px;
+}
+
+.message-nav__user {
+    display: flex;
+    flex-direction: column;
+    margin-left: 16px;
+}
+
+#message-user-fullname {
+    font-family: 'Wix Madefor Text', sans-serif;
+    font-weight: 500;
+    font-size: 17px;
+    color: black;
+    margin-top: 5px;
+    width: 250px
+}
+
+#message-user-status {
+    font-family: 'Wix Madefor Text', sans-serif; /*font-family: 'Roboto', sans-serif;*/
+    font-weight: 400;
+    font-size: 15px;
+    color: #898585;
+    margin-top: -5px;
+}
+
+.message-nav__content {
+    display: flex;
+    width: 42px;
+}
+
+.message-nav__menu {
+    margin: 0 0 0 auto;
+    padding-right: 30px;
+}
+
+img[alt="message-menu"] {
+    margin-top: 15px;
+}
+
+img[alt="send-message"]:active {
+    border-radius: 50px;
+    box-shadow: 0px 0px 26px -6px rgba(34, 60, 80, 0.84);
+}
+
+#message-container {
+    margin-bottom: 90%;
+    margin-top: 20%;
+}
+
+#contact-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background: white;
+    box-shadow: 0px 0px 26px -16px rgba(34, 60, 80, 0.84);
+}
+
+.contact-menu-row {
+    display: flex;
+    width: 100%;
+}
+
+.contact-item__img {
+    margin-left: 22%;
+}
+
+#contact-search {
+    width: 80%;
+    margin-left: 43px;
+    position: absolute;
+}
+
+#contact-search-icon {
+    position: absolute;
+    height: 38px;
+}
+
+/*
+.contact-container {
+    background-image: url("../img/contact/pattern.svg");
+    background-repeat: no-repeat;
+}*/

@@ -1,0 +1,61 @@
+
+echo '\n************* all *************'
+curl -v localhost:8089/api/rest/v1/users
+echo '\n*******************************\n'
+
+echo '************* one *************'
+curl -v localhost:8089/api/rest/v1/users/99
+echo '\n*******************************\n'
+
+echo '\n************* post request *************'
+
+curl -X POST \
+-H 'Content-type:application/json' \
+-d '{
+       "username": "test_api_2",
+       "password": "pass_test_2",
+       "passwordConfirm": "71823_1",
+       "gender": null,
+       "name": null,
+       "surname": null,
+       "description": null,
+       "email": null,
+       "phone": null,
+       "dob": null,
+       "lastVisit": null,
+       "roles": []
+   }' \
+   http://localhost:8089/api/rest/v1/users
+
+echo '\n****************************************\n'
+
+
+# $ curl -X POST localhost:8080/employees -H 'Content-type:application/json' -d '{"name": "Samwise Gamgee", "role": "gardener"}'
+# {"id":3,"name":"Samwise Gamgee","role":"gardener"}
+
+# $ curl -X PUT localhost:8080/employees/3 -H 'Content-type:application/json' -d '{"name": "Samwise Gamgee", "role": "ring bearer"}'
+# {"id":3,"name":"Samwise Gamgee","role":"ring bearer"}
+
+# $ curl -X DELETE localhost:8080/employees/3
+
+
+#{
+#    "username": "user4",
+#    "password": "$2a$10$MMbjWHW3ZuJfXeNq7i.fLOw5a3JnvwmDsxgiooXVzUP6fDhp78p9O",
+#    "passwordConfirm": "$2a$10$MMbjWHW3ZuJfXeNq7i.fLOw5a3JnvwmDsxgiooXVzUP6fDhp78p9O",
+#    "gender": null,
+#    "name": null,
+#    "surname": null,
+#    "description": null,
+#    "email": null,
+#    "phone": null,
+#    "dob": null,
+#    "lastVisit": null,
+#    "roles": [  {
+#                    "name": "USER"
+#                },
+#                {
+#                    "name": "ADMIN"
+#                }
+#       ]
+#}

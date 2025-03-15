@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: storage-service
+  datasource:
+    url: jdbc:postgresql://localhost:5432/bramkov_db
+    username: postgres
+    password: sde9REBKA435k
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        jdbc:
+          lob:
+            non_contextual_creation: true
+      dialect: org.hibernate.dialect.PostgreSQLDialect
+  mvc:
+    hiddenmethod:
+      filter:
+        enabled: true
+
+
+baseUrl: http://localhost:8080
+
+server:
+  port: 8088
