@@ -1,4 +1,4 @@
-package com.bramkov.microservice.storage.bramkov_microservice_storage;
+package com.bramkov.file_microservice.file;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;

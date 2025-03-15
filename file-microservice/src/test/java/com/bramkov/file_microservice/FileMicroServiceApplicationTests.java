@@ -1,10 +1,10 @@
-package com.bramkov.microservice.storage.bramkov_microservice_storage;
+package com.bramkov.file_microservice;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class StorageServiceApplicationTests {
+class FileMicroServiceApplicationTests {
 
 	@Test
 	void contextLoads() {

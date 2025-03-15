@@ -1,8 +1,8 @@
 spring:
   application:
-    name: storage-service
+    name: file-microservice
   datasource:
-    url: jdbc:postgresql://localhost:5432/bramkov_db
+    url: jdbc:postgresql://localhost:5432/file_microservice_db
     username: postgres
     password: sde9REBKA435k
   jpa:
@@ -18,6 +18,9 @@ spring:
     hiddenmethod:
       filter:
         enabled: true
+
+file:
+  upload-dir: ~/IdeaProjects/bramkov-project/file-microservice/upload-dir
 
 
 baseUrl: http://localhost:8080
