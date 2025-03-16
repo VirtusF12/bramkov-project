@@ -1,30 +1,16 @@
 package com.bramkov.file_microservice.file;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.core.io.Resource;
-import org.springframework.http.HttpHeaders;
-import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
-import org.springframework.web.multipart.MultipartFile;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 
-@RestController
-@RequestMapping("/api/files")
+@Controller
 public class FileController {
 
-    @Autowired
-    private FileStorageService fileStorageService;
-
-    @PostMapping("/upload")
-    public ResponseEntity<String> uploadFile(@RequestParam("file") MultipartFile file) {
-        String fileName = fileStorageService.storeFile(file);
-        return ResponseEntity.ok().body("File uploaded successfully: " + fileName);
+    @GetMapping
+    public String uploadPage(Model model) {
+        model.addAttribute("nameProject","Загрузка файлов");
+        return "index";
     }
 
-    @GetMapping("/download/{fileName:.+}")
-    public ResponseEntity<Resource> downloadFile(@PathVariable String fileName) {
-        Resource resource = fileStorageService.loadFileAsResource(fileName);
-        return ResponseEntity.ok()
-                .header(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=\"" + resource.getFilename() + "\"")
-                .body(resource);
-    }
 }

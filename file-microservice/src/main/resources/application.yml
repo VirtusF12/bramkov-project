@@ -18,12 +18,15 @@ spring:
     hiddenmethod:
       filter:
         enabled: true
-
-file:
-  upload-dir: ~/IdeaProjects/bramkov-project/file-microservice/upload-dir
-
+  servlet:
+    multipart:
+      max-file-size: 50MB
+      max-request-size: 50MB
 
 baseUrl: http://localhost:8080
 
 server:
   port: 8088
+
+#spring.servlet.multipart.max-file-size=50MB
+#spring.servlet.multipart.max-request-size=50MB
