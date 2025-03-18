@@ -1,13 +1,12 @@
-package com.bramkov.b_service;
+package com.bramkov.chat_microservice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class BServiceApplication {
+public class ChatMicroServiceApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(BServiceApplication.class, args);
+		SpringApplication.run(ChatMicroServiceApplication.class, args);
 	}
-
 }

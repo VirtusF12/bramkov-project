@@ -1,13 +1,14 @@
-package com.bramkov.user_microservice.message;
+package com.bramkov.chat_microservice.message;
 
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "messages")
-public class Message {
+@Table(name = "chat_item_row")
+public class ChatItemRow {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "id")
     private Long id;
 
     @Column(name = "id_from")
@@ -16,12 +17,14 @@ public class Message {
     @Column(name = "id_to")
     private Long idTo;
 
-    @Column(name = "message")
-    private String message;
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "id_message", referencedColumnName = "id")
+    private Message message;
 
-    public Message() {}
+    public ChatItemRow() {}
 
-    public Message(Long idFrom, Long idTo, String message) {
+    public ChatItemRow(Long id, Long idFrom, Long idTo, Message message) {
+        this.id = id;
         this.idFrom = idFrom;
         this.idTo = idTo;
         this.message = message;
@@ -47,21 +50,11 @@ public class Message {
         this.idTo = idTo;
     }
 
-    public String getMessage() {
+    public Message getMessage() {
         return message;
     }
 
-    public void setMessage(String message) {
+    public void setMessage(Message message) {
         this.message = message;
-    }
-
-    @Override
-    public String toString() {
-        return "Message{" +
-                "id=" + id +
-                ", idFrom=" + idFrom +
-                ", idTo=" + idTo +
-                ", message='" + message + '\'' +
-                '}';
     }
 }
