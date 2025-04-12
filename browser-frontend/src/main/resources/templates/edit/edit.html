@@ -5,17 +5,14 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Интернет-сервис, предоставляющий пользователям Интернета услуги по виртуальному общению с другими пользователями, аналог реальных служб знакомств. Цели знакомств у различных пользователей могут быть самые разные — виртуальное общение, дружба, серьёзные отношения, создание семьи, секс, виртуальный секс (нередко — всё вместе).">
-  <meta name="author" content="friend18.ru">
-
+  <meta name="description" content="Интернет-сервис.">
+  <meta name="author" content="bramkov.com">
   <title th:text="${title}" />
   <link rel="icon" th:href="@{${pathIcon}}">
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Geologica&family=Roboto:wght@400;500;700&family=Wix+Madefor+Text:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/reg-step/style.css">
-
 </head>
 
 <body>
@@ -30,7 +27,7 @@
             
             <form   id="from-data" 
                     th:method="POST" 
-                    th:action="@{/auth/user/edit}" 
+                    th:action="@{/edit}"
                     th:object="${user}" enctype="multipart/form-data" 
                     class="form-input">
                 

@@ -4,84 +4,47 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="Интернет-сервис, предоставляющий пользователям Интернета услуги по виртуальному общению с другими пользователями, аналог реальных служб знакомств. Цели знакомств у различных пользователей могут быть самые разные — виртуальное общение, дружба, серьёзные отношения, создание семьи, секс, виртуальный секс (нередко — всё вместе).">
-  <meta name="author" content="friend18.ru">
-<!--  <meta name="yandex-verification" content="0b71d6761acff126" />-->
-<!--  <meta name="google-site-verification" content="4NB3OuzyZHo0pUq3qOjc2EF5Akbt0HVzjvU45f512Ys" />-->
-
+  <meta name="description" content="Интернет-сервис.">
+  <meta name="author" content="bramkov.com">
   <title th:text="${title}"></title>
   <link rel="icon" th:href="@{${pathIcon}}">
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Geologica&family=Roboto:wght@400;500;700&family=Wix+Madefor+Text:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link href="/css/lib/bootstrap-5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" >
   <link href="/css/login.css" rel="stylesheet">
   <script src="/js/lib/jquery-3.6.3.js"></script>
-
 </head>
 
 <body class="text-center">
 
-
-<!--<div th:if="${param.error}">-->
-<!--  Invalid username and password.-->
-<!--</div>-->
-<!--<div th:if="${param.logout}">-->
-<!--  You have been logged out.-->
-<!--</div>-->
-
-<form th:method="POST" th:action="@{/login}" class="form-login" >
-  <img class="mb-4" src="/img/logo.svg" alt="" width="250" height="200">
-  <h1 class="h3 mb-3 font-weight-normal">Вход</h1>
-  <input type="text"
-         name="username"
-         placeholder="Логин"
-         class="form-control form-control-lg input-login"
-         autofocus="true"
-         required />
-  <br>
-  <input type="password"
-         name="password"
-         placeholder="Пароль"
-         class="form-control form-control-lg input-login"
-         required />
-  <br>
-  <button class="btn bg-warning btn-lg btn-block btn-login"
-          type="submit">ПРОДОЛЖИТЬ</button>
-  <br><br>
-
-  <!-- oauth2 github, google -->
-<!--  <div class="container unauthenticated">-->
-<!--    <div class="row justify-content-center">-->
-<!--      <div class="col-3">-->
-<!--        <a href="/oauth2/authorization/github">-->
-<!--          <img src="/img/login/github.svg" alt="github" class="wh-32">-->
-<!--        </a>-->
-<!--      </div>-->
-<!--      <div class="col-3">-->
-<!--        <a href="/oauth2/authorization/google">-->
-<!--          <img src="/img/login/google.svg" alt="google" class="wh-32">-->
-<!--        </a>-->
-<!--      </div>-->
-<!--      <div class="col-3">-->
-<!--        <a href="https://oauth.vk.com/authorize?client_id=51719014&display=page&redirect_uri=https://friend18.ru/callback&scope=email&response_type=code&v=5.131">-->
-<!--          <img src="/img/login/vk.svg" alt="vk" class="wh-32">-->
-<!--        </a>-->
-<!--      </div>-->
-<!--    </div>-->
-<!--  </div>-->
-
-  <br>
-
-  <p class="fw-100">У вас нет аккаунта? <a th:href="@{/reg}" class="link-info fw-100">Регистрация</a></p><br>
-  <p>
-    <a th:href="@{/}" class="link-info">
-      <img src="/img/login/back.svg" alt="back" class="wh-32">
-    </a>
-  </p>
-  <p class="mt-5 mb-3 text-muted">&copy; 2025</p>
-</form>
+  <form th:method="POST" th:action="@{/login}" class="form-login" >
+    <img class="mb-4" src="/img/logo.svg" alt="" width="250" height="200">
+    <h1 class="h3 mb-3 font-weight-normal">Вход</h1>
+    <input type="text"
+           name="username"
+           placeholder="Логин"
+           class="form-control form-control-lg input-login"
+           autofocus="true"
+           required />
+    <br>
+    <input type="password"
+           name="password"
+           placeholder="Пароль"
+           class="form-control form-control-lg input-login"
+           required />
+    <br>
+    <button class="btn bg-warning btn-lg btn-block btn-login"
+            type="submit">ПРОДОЛЖИТЬ</button>
+    <br><br><br>
+    <p class="fw-100">У вас нет аккаунта? <a th:href="@{/reg}" class="link-info fw-100">Регистрация</a></p><br>
+    <p>
+      <a th:href="@{/}" class="link-info">
+        <img src="/img/login/back.svg" alt="back" class="wh-32">
+      </a>
+    </p>
+    <p class="mt-5 mb-3 text-muted">&copy; 2025</p>
+  </form>
 
 </body>
 </html>

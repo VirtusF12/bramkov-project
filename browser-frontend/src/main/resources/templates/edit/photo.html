@@ -5,33 +5,14 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Интернет-сервис, предоставляющий пользователям Интернета услуги по виртуальному общению с другими пользователями, аналог реальных служб знакомств. Цели знакомств у различных пользователей могут быть самые разные — виртуальное общение, дружба, серьёзные отношения, создание семьи, секс, виртуальный секс (нередко — всё вместе).">
-  <meta name="author" content="friend18.ru">
-
+  <meta name="description" content="Интернет-сервис.">
+  <meta name="author" content="bramkov.com">
   <title th:text="${title}" />
   <link rel="icon" th:href="@{${pathIcon}}">
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Geologica&family=Roboto:wght@400;500;700&family=Wix+Madefor+Text:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/reg-step/style.css">
-
-  <!-- Yandex.Metrika counter -->
-  <script type="text/javascript" >
-    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-    m[i].l=1*new Date();
-    for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-    k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
-
-    ym(93569855, "init", {
-          clickmap:true,
-          trackLinks:true,
-          accurateTrackBounce:true
-    });
-  </script>
-  <noscript><div><img src="https://mc.yandex.ru/watch/93569855" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-  <!-- /Yandex.Metrika counter -->
 </head>
 
 <body>
@@ -43,15 +24,15 @@
         </div>
 
         <div id="body">
+
             <div id="lable">
                 <p class="fullname">ФОТОГРАФИЯ</p>
             </div>
+
             <form id="from-data" th:method="POST" th:action="@{/auth/user/edit/set/photo}" th:object="${user}" enctype="multipart/form-data" class="form-input">
-                
                 <div class="photo-line"> 
                     <div class="photo-content"></div>
                 </div>
-                
                 <label class="input-file">
                     <input  id="file"
                             type="file"
@@ -60,16 +41,16 @@
                     />
                     <span>+</span>
                 </label>
-
                 <input  class="input-btn input-btn-desc"
                         type="submit" 
                         value="продолжить"
                 />
-            </form> 
+            </form>
+
         </div>
 
         <div id="footer">
-            <p class="info">Продолжая вы принимаете  <a href="#">Соглашение</a> и  <a href="#">Конфиденциальность</a></p>
+            <p class="info">Продолжая вы принимаете <a href="#">Соглашение</a> и <a href="#">Конфиденциальность</a></p>
         </div>
 
     </div>
@@ -110,7 +91,6 @@
             input[0].files = dt.files;  
         }
     </script>
-
 
 </body>
 

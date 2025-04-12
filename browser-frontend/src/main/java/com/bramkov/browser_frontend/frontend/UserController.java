@@ -34,6 +34,14 @@ public class UserController {
         return "edit/edit";
     }
 
+    @PostMapping()
+    public String edit(
+            @ModelAttribute("user") User user
+    ) {
+//        userService.updateUser(user, "description");
+        return "redirect:/home";
+    }
+
     @GetMapping("/description")
     public String description(
             Model model

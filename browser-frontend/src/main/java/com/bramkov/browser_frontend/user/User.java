@@ -13,13 +13,13 @@ public class User {
     private String passwordConfirm;
     private Set<Role> roles = new HashSet<Role>();
 
-    private Gender gender; // +
-    private String name; // +
+    private Gender gender;
+    private String name;
     private String surname;
-    private String description; // +
+    private String description;
     private String email;
     private String phone;
-    private LocalDate dob; // +
+    private LocalDate dob;
     private LocalDateTime lastVisit;
 
     public User() {}
@@ -190,5 +190,9 @@ public class User {
 
     public void setLastVisit(LocalDateTime lastVisit) {
         this.lastVisit = lastVisit;
+    }
+
+    public String getPathImg() {
+        return "/img/edit/default.jpg";
     }
 }
